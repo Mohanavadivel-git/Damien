@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/White"
+    tools:context=".damienpost">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/Red"
+        android:elevation="4dp"
+        android:theme="@style/ToolBarStyle"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <ScrollView
+            android:id="@+id/lepraregister_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scrollbarSize="100dp">
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <!-- Name of the State -->
+                <TextView
+                    android:id="@+id/State"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the State -->
+                <Spinner
+                    android:id="@+id/StateSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:layout_marginBottom="@dimen/layout_margin_bottom"
+                    android:entries="@array/state_list"
+                    android:drawSelectorOnTop="true"/>
+
+                <!-- Name of the District -->
+                <TextView
+                    android:id="@+id/District"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/district"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the District -->
+                <Spinner
+                    android:id="@+id/DistrictSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:layout_marginBottom="@dimen/layout_margin_bottom"
+                    android:entries="@array/tn_districts"
+                    android:drawSelectorOnTop="true" />
+
+                <!-- Name of Health Facility -->
+                <TextView
+                    android:id="@+id/HealthFacility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/healthfacility"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of Health Facility -->
+                <Spinner
+                    android:id="@+id/HealthFacilitySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:layout_marginBottom="@dimen/layout_margin_bottom"
+                    android:entries="@array/tn_hf"
+                    android:drawSelectorOnTop="true" />
+
+                <!-- Name of the patient -->
+                <TextView
+                    android:id="@+id/Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the patient -->
+                <EditText
+                    android:id="@+id/FNameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"/>
+
+                <!-- Label of the Date of Birth-->
+                <TextView
+                    android:id="@+id/DateOfBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dob"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the Date of Birth-->
+                <DatePicker
+                    android:id="@+id/DateOfBirthvalue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+                <!-- Label of the Gender-->
+                <TextView
+                    android:id="@+id/Gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the Gender-->
+                <Spinner
+                    android:id="@+id/GenderSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:layout_marginBottom="@dimen/layout_margin_bottom"
+                    android:entries="@array/gender_list"
+                    android:drawSelectorOnTop="true" />
+
+                <!-- Label of the Phone-->
+                <TextView
+                    android:id="@+id/PhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the Phone-->
+                <EditText
+                    android:id="@+id/PhoneNumberText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"/>
+
+                <!-- Label of the Address-->
+                <TextView
+                    android:id="@+id/Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the Address-->
+                <EditText
+                    android:id="@+id/AddressText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:inputType="textMultiLine"
+                    android:lines="5"/>
+
+                <!-- Label of the LeprosyType-->
+                <TextView
+                    android:id="@+id/LeprosyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lep_type"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <Spinner
+                    android:id="@+id/LeprosyTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:layout_marginBottom="@dimen/layout_margin_bottom"
+                    android:entries="@array/LeprosyType"
+                    android:drawSelectorOnTop="true" />
+
+                <!-- Label of the Date of Reaction identified-->
+                <TextView
+                    android:id="@+id/Date_React_identify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dt_rec_identified"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the Date of Reaction identified-->
+                <DatePicker
+                    android:id="@+id/Date_React_identify_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+                <!-- Label of the Disability status at the time of  diagnosis for reaction -->
+                <TextView
+                    android:id="@+id/Disab_Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disab_status"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Label of the Disability status at the time of  diagnosis for reaction -->
+                <EditText
+                    android:id="@+id/Disab_Status_Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"/>
+
+                <!-- Label of the Type of reaction (I,II , neuritis)-->
+                <TextView
+                    android:id="@+id/TypeReaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_reaction"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the Type of reaction (I,II , neuritis)-->
+                 <Spinner
+                    android:id="@+id/TypeReactionSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:layout_marginBottom="@dimen/layout_margin_bottom"
+                    android:entries="@array/ReactionType"
+                    android:drawSelectorOnTop="true" />
+
+                <!-- Label of the Prednisolone dose issued with dates Dose (40 mg)-->
+                <TextView
+                    android:id="@+id/DoseIssued_40mg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mg40_dose_issued"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input date of the Prednisolone dose issued with dates Dose (40 mg)-->
+                <DatePicker
+                    android:id="@+id/DoseIssued_40mg_dt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+                <!-- Label of the Prednisolone dose issued with dates Dose (30 mg)-->
+                <TextView
+                    android:id="@+id/DoseIssued_30mg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mg30_dose_issued"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input date of the Prednisolone dose issued with dates Dose (30 mg)-->
+                <DatePicker
+                    android:id="@+id/DoseIssued_30mg_dt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+                <!-- Label of the Prednisolone dose issued with dates Dose (20 mg)-->
+                <TextView
+                    android:id="@+id/DoseIssued_20mg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mg20_dose_issued"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input date of the Prednisolone dose issued with dates Dose (20 mg)-->
+                <DatePicker
+                    android:id="@+id/DoseIssued_20mg_dt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+                <!-- Label of the Prednisolone dose issued with dates Dose (15 mg)-->
+                <TextView
+                    android:id="@+id/DoseIssued_15mg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mg15_dose_issued"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input date of the Prednisolone dose issued with dates Dose (15 mg)-->
+                <DatePicker
+                    android:id="@+id/DoseIssued_15mg_dt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+
+                <!-- Label of the Prednisolone dose issued with dates Dose (10 mg)-->
+                <TextView
+                    android:id="@+id/DoseIssued_10mg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mg10_dose_issued"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input date of the Prednisolone dose issued with dates Dose (10 mg)-->
+                <DatePicker
+                    android:id="@+id/DoseIssued_10mg_dt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+
+                <!-- Label of the Prednisolone dose issued with dates Dose (05 mg)-->
+                <TextView
+                    android:id="@+id/DoseIssued_05mg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mg05_dose_issued"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input date of the Prednisolone dose issued with dates Dose (05 mg)-->
+                <DatePicker
+                    android:id="@+id/DoseIssued_05mg_dt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+                <!-- Label of the Other Drugs-->
+                <TextView
+                    android:id="@+id/OtherDrugs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_drugs"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the Other Drugs-->
+                <EditText
+                    android:id="@+id/OtherDrugsValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"/>
+
+                <!-- Label of Treatment completed (Yes/No)-->
+                <TextView
+                    android:id="@+id/TreatComplete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/treat_complete"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <!-- Input of Treatment completed Yes or No related Questions-->
+                <RadioGroup
+                    android:id="@+id/Treatmentstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio_treat_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_treat_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"/>
+                </RadioGroup>
+
+
+                <!-- Label of Defaulted/Died/others (Yes/No)-->
+                <TextView
+                    android:id="@+id/DDOStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ddo"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of Defaulted/Died/others Yes or No related Questions-->
+                <RadioGroup
+                    android:id="@+id/personstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio_ddo_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_ddo_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"/>
+                </RadioGroup>
+
+
+                <!-- Label of the Remarks-->
+                <TextView
+                    android:id="@+id/Remarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remarks"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!-- Input of the Remarks-->
+                <EditText
+                    android:id="@+id/RemarksValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:background="@color/Red"
+                        android:theme="@style/Theme.AppCompat"
+                        android:gravity="center_horizontal|center"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:layout_marginRight="@dimen/margin_right"
+                        android:onClick="submitclick"/>
+
+
+                    <Button
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:background="@color/Red"
+                        android:theme="@style/Theme.AppCompat"
+                        android:layout_toRightOf="@id/submit"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+

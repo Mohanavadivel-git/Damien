@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:id="@+id/ll_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+        <!-- Name of the State -->
+        <TextView
+            android:id="@+id/State"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/state"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- Input of the State -->
+        <Spinner
+            android:id="@+id/StateSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:entries="@array/state_list"
+            android:drawSelectorOnTop="true"/>
+
+        <!-- Name of the District -->
+        <TextView
+            android:id="@+id/District"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/district"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- Input of the District -->
+        <Spinner
+            android:id="@+id/DistrictSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:entries="@array/tn_districts"
+            android:drawSelectorOnTop="true" />
+
+        <!-- Name of Health Facility -->
+        <TextView
+            android:id="@+id/HealthFacility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/healthfacility"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- Input of Health Facility -->
+        <Spinner
+            android:id="@+id/HealthFacilitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:entries="@array/tn_hf"
+            android:drawSelectorOnTop="true" />
+        <!-- Label of the Phone-->
+        <TextView
+            android:id="@+id/PhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- Input of the Phone-->
+        <EditText
+            android:id="@+id/PhoneNumberText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"/>
+
+        <!-- Label of the Address-->
+        <TextView
+            android:id="@+id/Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- Input of the Address-->
+        <EditText
+            android:id="@+id/AddressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:inputType="textMultiLine"
+            android:lines="5"/>
+
+        <Button
+            android:id="@+id/Contactsubmit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Save"
+            android:onClick="submitclick"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

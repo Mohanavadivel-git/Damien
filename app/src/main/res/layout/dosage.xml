@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/White">
+
+    <ScrollView
+        android:id="@+id/lepraregister_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scrollbarSize="25dp">
+
+        <LinearLayout
+            android:id="@+id/ll_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+            <!-- Label of the Prednisolone dose issued with dates Dose (40 mg)-->
+            <TextView
+                android:id="@+id/DoseIssued_40mg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mg40_dose_issued"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <!-- Input date of the Prednisolone dose issued with dates Dose (40 mg)-->
+            <DatePicker
+                android:id="@+id/DoseIssued_40mg_dt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner">
+            </DatePicker>
+
+            <!-- Label of the Prednisolone dose issued with dates Dose (30 mg)-->
+            <TextView
+                android:id="@+id/DoseIssued_30mg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mg30_dose_issued"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <!-- Input date of the Prednisolone dose issued with dates Dose (30 mg)-->
+            <DatePicker
+                android:id="@+id/DoseIssued_30mg_dt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner">
+            </DatePicker>
+
+            <!-- Label of the Prednisolone dose issued with dates Dose (20 mg)-->
+            <TextView
+                android:id="@+id/DoseIssued_20mg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mg20_dose_issued"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <!-- Input date of the Prednisolone dose issued with dates Dose (20 mg)-->
+            <DatePicker
+                android:id="@+id/DoseIssued_20mg_dt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner">
+            </DatePicker>
+
+            <!-- Label of the Prednisolone dose issued with dates Dose (15 mg)-->
+            <TextView
+                android:id="@+id/DoseIssued_15mg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mg15_dose_issued"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <!-- Input date of the Prednisolone dose issued with dates Dose (15 mg)-->
+            <DatePicker
+                android:id="@+id/DoseIssued_15mg_dt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner">
+            </DatePicker>
+
+
+            <!-- Label of the Prednisolone dose issued with dates Dose (10 mg)-->
+            <TextView
+                android:id="@+id/DoseIssued_10mg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mg10_dose_issued"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <!-- Input date of the Prednisolone dose issued with dates Dose (10 mg)-->
+            <DatePicker
+                android:id="@+id/DoseIssued_10mg_dt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner">
+            </DatePicker>
+
+
+            <!-- Label of the Prednisolone dose issued with dates Dose (05 mg)-->
+            <TextView
+                android:id="@+id/DoseIssued_05mg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mg05_dose_issued"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <!-- Input date of the Prednisolone dose issued with dates Dose (05 mg)-->
+            <DatePicker
+                android:id="@+id/DoseIssued_05mg_dt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner">
+            </DatePicker>
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:text="Save"
+                android:onClick="submitclick"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

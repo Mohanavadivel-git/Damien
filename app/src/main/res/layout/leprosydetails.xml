@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:id="@+id/ll_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+        <!-- Label of the LeprosyType-->
+        <TextView
+            android:id="@+id/LeprosyType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lep_type"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Spinner
+            android:id="@+id/LeprosyTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:entries="@array/LeprosyType"
+            android:drawSelectorOnTop="true" />
+
+        <!-- Label of the Date of Reaction identified-->
+        <TextView
+            android:id="@+id/Date_React_identify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dt_rec_identified"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- Input of the Date of Reaction identified-->
+        <DatePicker
+            android:id="@+id/Date_React_identify_val"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner">
+        </DatePicker>
+
+        <!-- Label of the Disability status at the time of  diagnosis for reaction -->
+        <TextView
+            android:id="@+id/Disab_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disab_status"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- Label of the Disability status at the time of  diagnosis for reaction -->
+        <EditText
+            android:id="@+id/Disab_Status_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"/>
+
+        <!-- Label of the Type of reaction (I,II , neuritis)-->
+        <TextView
+            android:id="@+id/TypeReaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_reaction"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- Input of the Type of reaction (I,II , neuritis)-->
+        <Spinner
+            android:id="@+id/TypeReactionSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:entries="@array/ReactionType"
+            android:drawSelectorOnTop="true" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Save"
+            android:onClick="submitclick"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

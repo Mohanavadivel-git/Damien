@@ -1,0 +1,227 @@
+<resources>
+    <string name="app_name">MSL</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="feedbacktitle">FeedbackTitle</string>
+    <string name="feedbackname">Feedbackname</string>
+    <string name="feedbackemail">Feedbackemail</string>
+    <string name="feedbacktype">FeedbackType</string>
+    <string name="feedbackbody">Feedbackbody</string>
+    <string name="feedbackresponse">Feedbackresponse</string>
+    <string name="feedbackbutton">Feedbackbutton</string>
+    <!--Other string resources also defined in this file… -->
+    <string name="feedbacktype1">Praise</string>
+    <string name="feedbacktype2">Gripe</string>
+    <string name="feedbacktype3">Suggestion</string>
+    <string name="feedbacktype4">Bug</string>
+    <string-array name="feedbacktypelist">
+        <item>@string/feedbacktype1</item>
+        <item>@string/feedbacktype2</item>
+        <item>@string/feedbacktype3</item>
+        <item>@string/feedbacktype4</item>
+    </string-array>
+    <string name="title_activity_sign_in">Sign in</string>
+    <color name="White">#ffffff</color>
+    <color name="Red">#eb1423</color>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_login2">Sign in</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_trial">Trial</string>
+    <string name="title_activity_post">PostActivity</string>
+    <string name="title_activity_damienpost">damienpost</string>
+    <string name="role">Select User Role</string>
+
+    <string-array name="select_login">
+        <item>Central</item>
+        <item>State</item>
+        <item>District</item>
+        <item>Health Facility</item>
+    </string-array>
+
+    <string name="summary">"MSL Summary"</string>
+    <string name="spinner">"Select Group"</string>
+    <string name="lepra">"Lepra reaction"</string>
+    <string name="care">"Cure after care"</string>
+    <string name="lr_treated">"Lepra reaction treated"</string>
+    <string name="yesorno">"YES/NO"</string>
+    <string name="yes">"Yes"</string>
+    <string name="no">"No"</string>
+    <string name="state">"Name of the state"</string>
+    <string name="district">"Name of the District"</string>
+    <string name="healthfacility">"Name of Health Facility"</string>
+    <string name="name">"Name of the patient"</string>
+    <string name="dob">"Date of Birth"</string>
+    <string name="gender">"Gender"</string>
+    <string name="phone">"Phone Number"</string>
+    <string name="address">"Address"</string>
+    <string name="lep_type">"Type of Leprosy"</string>
+    <string name="dt_rec_identified">"Date of Reaction identified"</string>
+    <string name="disab_status">"Disability status at the time of  diagnosis for reaction"</string>
+    <string name="type_reaction">"Type of reaction"</string>
+    <string name="mg40_dose_issued">"40 mg dose issued date"</string>
+    <string name="mg30_dose_issued">"30 mg dose issued date"</string>
+    <string name="mg20_dose_issued">"20 mg dose issued date"</string>
+    <string name="mg15_dose_issued">"15 mg dose issued date"</string>
+    <string name="mg10_dose_issued">"10 mg dose issued date"</string>
+    <string name="mg05_dose_issued">"05 mg dose issued date"</string>
+    <string name="other_drugs">"Other drugs"</string>
+    <string name="treat_complete">"Treatment completed"</string>
+    <string name="ddo">"Defaulted/Died/others"</string>
+    <string name="remarks">"Remarks"</string>
+
+    <string-array name="gender_list">
+        <item>"Male"</item>
+        <item>"Female"</item>
+        <item>"Male Child"</item>
+        <item>"Female Child"</item>
+        <item>"Others"</item>
+    </string-array>
+
+    <string-array name="state_list">
+        <item>"TamilNadu"</item>
+        <item>"Andhra Pradesh"</item>
+        <item>"Bihar"</item>
+        <item>"Jharkhand"</item>
+        <item>"Delhi"</item>
+    </string-array>
+
+    <string-array name="tn_districts">
+        <item>"Trichy"</item>
+        <item>"Salem"</item>
+        <item>"Madurai"</item>
+        <item>"Tanjavur"</item>
+        <item>"Ariyalur"</item>
+        <item>"Pudukkotai"</item>
+        <item>"Karur"</item>
+        <item>"Virdunagar"</item>
+        <item>"Perembalur"</item>
+        <item>"Darmapuri"</item>
+        <item>"Krishnagiri"</item>
+        <item>"Kanchipuram"</item>
+        <item>"Tiruvallur"</item>
+    </string-array>
+
+    <string-array name="ap_districts">
+        <item>"Nellore"</item>
+        <item>"Prakasam"</item>
+        <item>"Chitoor"</item>
+        <item>"Kadappa"</item>
+        <item>"Karnool"</item>
+        <item>"Anantapur"</item>
+    </string-array>
+
+    <string-array name="bihar_district">
+        <item>"Patna"</item>
+        <item>"Bhojpur"</item>
+        <item>"Aurangabad"</item>
+        <item>"Nawada"</item>
+        <item>"Vaishali"</item>
+        <item>"Saran"</item>
+        <item>"Siwan"</item>
+        <item>"Gopalganj"</item>
+        <item>"Madhubani"</item>
+        <item>"Supaul"</item>
+        <item>"Sheohar"</item>
+        <item>"Saharsa"</item>
+        <item>"Khagaria"</item>
+        <item>"Araria"</item>
+        <item>"Nalanda"</item>
+        <item>"EastChamparan"</item>
+        <item>"WestChamparan"</item>
+        <item>"Darbhanga"</item>
+        <item>"Sitamarhi"</item>
+        <item>"Purnea"</item>
+        <item>"Katihar"</item>
+        <item>"Madhepura"</item>
+        <item>"Kishangani"</item>
+        <item>"Rohtas"</item>
+        <item>"Gaya"</item>
+        <item>"Jehanabad"</item>
+        <item>"Arwal"</item>
+    </string-array>
+
+    <string-array name="jharkhand_district">
+        <item>"Gumla"</item>
+        <item>"Lohardaga"</item>
+        <item>"Simdega"</item>
+        <item>"East Singhbum"</item>
+        <item>"West Singhbum"</item>
+        <item>"Saraikela"</item>
+    </string-array>
+
+    <string-array name="delhi">
+        <item>"New Delhi"</item>
+    </string-array>
+    <string-array name="LeprosyType">
+        <item>"MB"</item>
+        <item>"LB"</item>
+    </string-array>
+    <string-array name="ReactionType">
+        <item>"1"</item>
+        <item>"11"</item>
+        <item>"Neuritis"</item>
+    </string-array>
+    <string-array name="tn_hf">
+        <item>"TN-HF1"</item>
+        <item>"TN-HF2"</item>
+        <item>"TN-HF3"</item>
+        <item>"TN-HF4"</item>
+        <item>"TN-HF5"</item>
+    </string-array>
+    <string-array name="ap_hf">
+        <item>"AP-HF1"</item>
+        <item>"AP-HF2"</item>
+        <item>"AP-HF3"</item>
+        <item>"AP-HF4"</item>
+        <item>"AP-HF5"</item>
+    </string-array>
+    <string-array name="dl_hf">
+        <item>"DL-HF1"</item>
+        <item>"DL-HF2"</item>
+        <item>"DL-HF3"</item>
+        <item>"DL-HF4"</item>
+        <item>"DL-HF5"</item>
+    </string-array>
+    <string-array name="br_hf">
+        <item>"BR-HF1"</item>
+        <item>"BR-HF2"</item>
+        <item>"BR-HF3"</item>
+        <item>"BR-HF4"</item>
+        <item>"BR-HF5"</item>
+    </string-array>
+    <string-array name="jh_hf">
+        <item>"JH-HF1"</item>
+        <item>"JH-HF2"</item>
+        <item>"JH-HF3"</item>
+        <item>"JH-HF4"</item>
+        <item>"JH-HF5"</item>
+    </string-array>
+    <string name="title_activity_bottom_navigation">BottomNavigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_imageupload">Imageupload</string>
+    <string name="title_activity_lepra_forms">LepraForms</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_tab_example">TabExample</string>
+    <string name="tab_text_1">Personal</string>
+    <string name="tab_text_2">Contacts</string>
+    <string name="tab_text_3">Leprosy</string>
+    <string name="tab_text_4">Dosage</string>
+    <string name="tab_text_5">Others</string>
+    <string name="tab_text_6">Photos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
