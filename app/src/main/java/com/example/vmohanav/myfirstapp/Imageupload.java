@@ -40,6 +40,9 @@ public class Imageupload extends AppCompatActivity {
 
     //edittext for getting the tags input
     EditText editTextTags;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

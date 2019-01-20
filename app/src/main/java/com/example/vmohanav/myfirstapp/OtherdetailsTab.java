@@ -1,5 +1,6 @@
 package com.example.vmohanav.myfirstapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -47,6 +48,18 @@ public class OtherdetailsTab extends Fragment {
         final RadioGroup PersonStatusGroup = view.findViewById(R.id.personstatus);
         final TextView OtherDrugsValue =  view.findViewById(R.id.OtherDrugsValue);
         final TextView Remarks =  view.findViewById(R.id.RemarksValue);
+
+        Button Finish = view.findViewById(R.id.profilefinish);
+
+        Finish.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getActivity(), Imageupload.class);
+                startActivity(intent);
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener()
         {
