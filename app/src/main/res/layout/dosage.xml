@@ -141,7 +141,7 @@
                 android:datePickerMode="spinner">
             </DatePicker>
             <Button
-                android:id="@+id/submit"
+                android:id="@+id/dosagesubmit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_left"

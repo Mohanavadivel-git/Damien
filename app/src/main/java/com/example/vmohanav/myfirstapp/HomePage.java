@@ -37,7 +37,7 @@ public class HomePage extends AppCompatActivity {
         //ImageButton myButton = (ImageButton) findViewById(R.id.patientRetrival);
     }
     public void submitLepra(View button){
-        Intent intent = new Intent(this, TabExample.class);
+        Intent intent = new Intent(this, Registration.class);
         startActivity(intent);
     }
 

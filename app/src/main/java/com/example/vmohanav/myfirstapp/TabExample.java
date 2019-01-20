@@ -78,9 +78,38 @@ public class TabExample extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = findViewById(R.id.tabs);
+        mViewPager.setOffscreenPageLimit(0);
 
-        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout){
+
+            // This method will be invoked when a new page becomes selected.
+            @Override
+            public void onPageSelected(int position) {
+               // Toast.makeText(TabExample.this,
+                 //       "Selected page position: " + position, Toast.LENGTH_SHORT).show();
+                //mViewPager.setCurrentItem(0);
+            }
+
+            // This method will be invoked when the current page is scrolled
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                // Code goes here
+            }
+
+            // Called when the scroll state changes:
+            // SCROLL_STATE_IDLE, SCROLL_STATE_DRAGGING, SCROLL_STATE_SETTLING
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                // Code goes here
+            }
+        });
+        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager){
+            /*@Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                //mViewPager.setCurrentItem(0);
+                //mViewPager.setActivated(true);
+            }*/
+        });
 
     }
 
@@ -128,6 +157,7 @@ public class TabExample extends AppCompatActivity {
          */
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
+            ContactsTab contactsTabfragment=new ContactsTab();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
@@ -243,28 +273,23 @@ public class TabExample extends AppCompatActivity {
             switch (position) {
 
                 case 1:
-                    ContactsTab Contactsfragment = new ContactsTab();
-                    return Contactsfragment.newInstance(position + 1);
+                    LeprosyTab Leprosyfragment = new LeprosyTab();
+                    return Leprosyfragment.newInstance(position + 1);
+
                 case 2:
-                    if(TabExample.id>0){
-                        LeprosyTab Leprosyfragment = new LeprosyTab();
-                        return Leprosyfragment.newInstance(position + 1);
-                    }else {
-                        PlaceholderFragment personal=new PlaceholderFragment();
-                        return personal.newInstance(1);
-                    }
+                    DosageTab Dosagefragment = new DosageTab();
+                    return Dosagefragment.newInstance(position);
 
                 case 3:
-                    DosageTab Dosagefragment = new DosageTab();
-                    return Dosagefragment.newInstance(position + 1);
-                case 4:
                     OtherdetailsTab Otherdetailsfragment = new OtherdetailsTab();
-                    return Otherdetailsfragment.newInstance(position + 1);
-                case 5:
+                    return Otherdetailsfragment.newInstance(position);
+
+                case 4:
                     PhotoTab Photofragment = new PhotoTab();
-                    return Photofragment.newInstance(position + 1);
+                    return Photofragment.newInstance(position);
+
             }
-            return PlaceholderFragment.newInstance(position + 1);
+            return ContactsTab.newInstance(position);
         }
 
         @Override

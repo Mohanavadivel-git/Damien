@@ -33,42 +33,42 @@
             android:layout_height="match_parent"
             app:tabMode="scrollable">
 
-            <android.support.design.widget.TabItem
+<!--            <android.support.design.widget.TabItem
                 android:id="@+id/tabItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tab_text_1"
                 android:textStyle="bold"
-                />
+                />-->
 
             <android.support.design.widget.TabItem
-                android:id="@+id/tabItem2"
+                android:id="@+id/tabItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tab_text_2"
                 android:textStyle="bold"/>
 
             <android.support.design.widget.TabItem
-                android:id="@+id/tabItem3"
+                android:id="@+id/tabItem2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tab_text_3"
                 android:textStyle="bold"/>
 
             <android.support.design.widget.TabItem
-                android:id="@+id/tabItem4"
+                android:id="@+id/tabItem3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tab_text_4"
                 android:textStyle="bold"/>
             <android.support.design.widget.TabItem
-                android:id="@+id/tabItem5"
+                android:id="@+id/tabItem4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tab_text_5"
                 android:textStyle="bold"/>
             <android.support.design.widget.TabItem
-                android:id="@+id/tabItem6"
+                android:id="@+id/tabItem5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tab_text_6"

@@ -17,7 +17,6 @@ public class PhotoTab extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -25,5 +24,4 @@ public class PhotoTab extends Fragment {
         View view = inflater.inflate(R.layout.activity_imageupload, container, false);
         return view;
     }
-
 }

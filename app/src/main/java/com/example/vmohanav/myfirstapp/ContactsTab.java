@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -34,20 +36,88 @@ public class ContactsTab extends Fragment {
         return fragment;
     }
 
+    /*@Override
+    public void onStart(){
+        super.onStart();
+        Toast toast = Toast.makeText(getActivity(),
+                "Starting the fragment",
+                Toast.LENGTH_SHORT);
+        toast.show();
+    }*/
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //Retrieve the value
-        final String id = getArguments().getString("id");
-        // Get the view from fragmenttab1.xml
         View view = inflater.inflate(R.layout.contacts, container, false);
-
         Button button = view.findViewById(R.id.Contactsubmit);
         final EditText PhoneNumber =  view.findViewById(R.id.PhoneNumberText);
         final EditText Address =  view.findViewById(R.id.AddressText);
-        final Spinner State =  view.findViewById(R.id.StateSpinner);
-        final Spinner District =  view.findViewById(R.id.DistrictSpinner);
-        final Spinner HealthFacility =  view.findViewById(R.id.HealthFacilitySpinner);
+        final Spinner StateSpinner = view.findViewById(R.id.StateSpinner);
+        final Spinner DistrictSpinner = view.findViewById(R.id.DistrictSpinner);
+        final Spinner HealthFacilitySpinner =  view.findViewById(R.id.HealthFacilitySpinner);
+
+
+        ArrayAdapter<CharSequence> StateAdapter = ArrayAdapter.createFromResource(getContext(), R.array.state_list, android.R.layout.simple_spinner_item);
+        StateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+        final ArrayAdapter<CharSequence> TN_DistrictAdapter = ArrayAdapter.createFromResource(getContext(), R.array.tn_districts, android.R.layout.simple_spinner_item);
+        final ArrayAdapter<CharSequence> AP_DistrictAdapter = ArrayAdapter.createFromResource(getContext(), R.array.ap_districts, android.R.layout.simple_spinner_item);
+        final ArrayAdapter<CharSequence> Bihar_DistrictAdapter = ArrayAdapter.createFromResource(getContext(), R.array.bihar_district, android.R.layout.simple_spinner_item);
+        final ArrayAdapter<CharSequence> Jharkhand_DistrictAdapter = ArrayAdapter.createFromResource(getContext(), R.array.jharkhand_district, android.R.layout.simple_spinner_item);
+        final ArrayAdapter<CharSequence> Delhi_DistrictAdapter = ArrayAdapter.createFromResource(getContext(), R.array.delhi, android.R.layout.simple_spinner_item);
+
+        final ArrayAdapter<CharSequence> TN_HealthFacilityAdapter = ArrayAdapter.createFromResource(getContext(), R.array.tn_hf, android.R.layout.simple_spinner_item);
+        final ArrayAdapter<CharSequence> AP_HealthFacilityAdapter = ArrayAdapter.createFromResource(getContext(), R.array.ap_hf, android.R.layout.simple_spinner_item);
+        final ArrayAdapter<CharSequence> Bihar_HealthFacilityAdapter = ArrayAdapter.createFromResource(getContext(), R.array.br_hf, android.R.layout.simple_spinner_item);
+        final ArrayAdapter<CharSequence> Jharkhand_HealthFacilityAdapter = ArrayAdapter.createFromResource(getContext(), R.array.jh_hf, android.R.layout.simple_spinner_item);
+        final ArrayAdapter<CharSequence> Delhi_HealthFacilityAdapter = ArrayAdapter.createFromResource(getContext(), R.array.dl_hf, android.R.layout.simple_spinner_item);
+
+        TN_DistrictAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        AP_DistrictAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Bihar_DistrictAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Jharkhand_DistrictAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Delhi_DistrictAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        TN_HealthFacilityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        AP_HealthFacilityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Bihar_HealthFacilityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Jharkhand_HealthFacilityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Delhi_HealthFacilityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        StateSpinner.setAdapter(StateAdapter);
+        StateSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position==0){
+                    DistrictSpinner.setAdapter(TN_DistrictAdapter);
+                    HealthFacilitySpinner.setAdapter(TN_HealthFacilityAdapter);
+                }
+                else if(position==1){
+                    DistrictSpinner.setAdapter(AP_DistrictAdapter);
+                    HealthFacilitySpinner.setAdapter(AP_HealthFacilityAdapter);
+                }
+                else if(position==2){
+                    DistrictSpinner.setAdapter(Bihar_DistrictAdapter);
+                    HealthFacilitySpinner.setAdapter(Bihar_HealthFacilityAdapter);
+                }
+                else if(position==3){
+                    DistrictSpinner.setAdapter(Jharkhand_DistrictAdapter);
+                    HealthFacilitySpinner.setAdapter(Jharkhand_HealthFacilityAdapter);
+                }
+                else if(position==4){
+                    DistrictSpinner.setAdapter(Delhi_DistrictAdapter);
+                    HealthFacilitySpinner.setAdapter(Delhi_HealthFacilityAdapter);
+                }
+
+                DistrictSpinner.setEnabled(true);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener()
         {
@@ -56,11 +126,11 @@ public class ContactsTab extends Fragment {
             {
                 String GivenPhoneNumber=PhoneNumber.getText().toString().trim();
                 String GivenAddress=Address.getText().toString().trim();
-                String GivenState = State.getSelectedItem().toString();
-                String GivenDistrict = District.getSelectedItem().toString();
-                String GivenHealthFacility = HealthFacility.getSelectedItem().toString();
+                String GivenState = StateSpinner.getSelectedItem().toString();
+                String GivenDistrict = DistrictSpinner.getSelectedItem().toString();
+                String GivenHealthFacility = HealthFacilitySpinner.getSelectedItem().toString();
 
-                String url = "https://webapp-181209061846.azurewebsites.net/Leprosy/"+TabExample.id;
+                String url = "https://webapp-181209061846.azurewebsites.net/Leprosy/contacts/"+Registration.Custid;
                 RequestQueue MyRequestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
                 JSONObject json = new JSONObject();
 
@@ -104,7 +174,6 @@ public class ContactsTab extends Fragment {
         });
         return view;
     }
-
 }
 
 
